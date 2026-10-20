@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FarmLink AI | Smarter Selling for Farmers</title>
+<style>
+:root{--green:#176b45;--green2:#23865a;--cream:#f7f8f2;--ink:#183329;--muted:#617269;--orange:#f4a340}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.55}
+nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid #e5ece6;padding:14px 5%;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{font-size:1.25rem;font-weight:800;color:var(--green)}.logo span{color:var(--orange)}
+nav .links{display:flex;gap:18px;flex-wrap:wrap}a{color:var(--green);text-decoration:none;font-weight:700}nav a{font-size:.92rem}
+.hero{padding:64px 5% 54px;background:linear-gradient(125deg,#e8f5e9,#f7f8f2 65%);display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}
+.eyebrow{display:inline-block;background:#d5eadb;color:var(--green);padding:6px 12px;border-radius:30px;font-size:.82rem;font-weight:700}
+h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.08;margin:18px 0}h1 em{font-style:normal;color:var(--green2)}.hero p{font-size:1.08rem;color:var(--muted);max-width:610px}
+.btn{display:inline-block;background:var(--green);color:#fff;border:0;padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer;font-size:1rem}.btn:hover{background:#0e5033}
+.hero-card,.panel,.feature{background:#fff;border:1px solid #e4ebe5;border-radius:18px;box-shadow:0 10px 28px #173e2410}
+.hero-card{padding:24px}.card-head{display:flex;justify-content:space-between;align-items:center;gap:12px}.pill{background:#e0f3e6;color:var(--green);padding:5px 9px;border-radius:20px;font-size:.78rem;font-weight:700}
+.mini-chart{height:130px;display:flex;align-items:end;gap:10px;padding:12px 4px 0;border-bottom:1px solid #e6eee8}.bar{flex:1;border-radius:7px 7px 0 0;background:linear-gradient(#7fc89b,#23865a);min-width:12px}.days{display:flex;justify-content:space-between;color:var(--muted);font-size:.75rem;padding-top:6px}
+section{padding:56px 5%}.section-title{text-align:center;max-width:720px;margin:0 auto 28px}.section-title h2{font-size:2rem;margin:0 0 8px}.section-title p{color:var(--muted);margin:0}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.feature{padding:22px}.emoji{font-size:1.8rem}.feature h3{margin:8px 0}.feature p{color:var(--muted);margin:0}
+.forecast-wrap{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}.panel{padding:24px}.panel h3{margin-top:0}.forecast-row{display:grid;grid-template-columns:1fr 1.2fr auto;gap:12px;align-items:center;padding:12px 0;border-bottom:1px solid #edf1ed}.forecast-row:last-child{border:0}.trend{height:8px;background:#e8efe9;border-radius:8px;overflow:hidden}.trend span{display:block;height:100%;background:var(--green2);border-radius:8px}.up{color:var(--green);font-weight:700}.down{color:#b76b19;font-weight:700}
+label{display:block;font-weight:700;font-size:.9rem;margin:12px 0 5px}input,select{width:100%;padding:12px;border:1px solid #cfdad1;border-radius:9px;font-size:1rem;background:#fff;color:var(--ink)}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.result{margin-top:18px;background:#eef7ef;border-radius:12px;padding:16px;display:none}.result.show{display:block}.offer{padding:12px 0;border-bottom:1px solid #dce9de}.offer:last-child{border-bottom:0}.offer.best{font-weight:700;color:var(--green)}.small{font-size:.85rem;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:20px;border-radius:14px;background:#fff;border:1px solid #e4ebe5}.num{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#dcefe1;color:var(--green);font-weight:800}
+footer{padding:26px 5%;background:#153e2d;color:#e8f4eb;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}footer .small{color:#c7d8cd}
+@media(max-width:800px){.hero,.forecast-wrap{grid-template-columns:1fr}.features{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}nav{align-items:flex-start;flex-direction:column}.links{gap:12px!important}}
+@media(max-width:520px){.features,.steps,.form-grid{grid-template-columns:1fr}.hero{padding-top:42px}section{padding:42px 5%}.forecast-row{grid-template-columns:1fr auto}.forecast-row .trend{grid-column:1/-1;grid-row:2}}
+</style>
+</head>
+<body>
+<nav><div class="logo">FarmLink<span> AI</span></div><div class="links"><a href="#features">Features</a><a href="#forecast">Demand forecast</a><a href="#net-return">Net return calculator</a><a href="#how">How it works</a></div></nav>
+<header class="hero">
+<div><span class="eyebrow">A smarter way from farm to market</span><h1>Sell smarter.<br><em>Earn better.</em></h1><p>FarmLink AI helps farmers compare buyers, estimate real earnings after transport costs, and understand demand trends before choosing where to sell.</p><a class="btn" href="#net-return">Try the net return calculator ↓</a></div>
+<div class="hero-card"><div class="card-head"><div><strong>Weekly demand outlook</strong><div class="small">Illustrative sample data</div></div><span class="pill">Next 7 days</span></div><div class="mini-chart"><div class="bar" style="height:42%"></div><div class="bar" style="height:58%"></div><div class="bar" style="height:51%"></div><div class="bar" style="height:72%"></div><div class="bar" style="height:66%"></div><div class="bar" style="height:86%"></div><div class="bar" style="height:100%"></div></div><div class="days"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div><p class="small">Demo visualization only. Connect live market data to generate real forecasts.</p></div>
+</header>
+<section id="features"><div class="section-title"><h2>Tools that support better decisions</h2><p>Designed to make selling decisions easier for farmers and farmer groups.</p></div><div class="features">
+<div class="feature"><div class="emoji">📈</div><h3>Demand forecasting</h3><p>View example demand trends and plan what quantity to offer in the market.</p></div>
+<div class="feature"><div class="emoji">💰</div><h3>Net realization</h3><p>Compare buyer prices after transport and other selling costs—not just headline prices.</p></div>
+<div class="feature"><div class="emoji">🤝</div><h3>Buyer matching</h3><p>Explore suitable buyers such as retailers, restaurants, processors and bulk purchasers.</p></div>
+<div class="feature"><div class="emoji">🚚</div><h3>Logistics planning</h3><p>Account for delivery costs and explore nearby buyers to improve take-home returns.</p></div>
+<div class="feature"><div class="emoji">🔎</div><h3>Price insights</h3><p>Review sample price comparisons to help prepare for a sale.</p></div>
+<div class="feature"><div class="emoji">📦</div><h3>Order and stock tracking</h3><p>Plan available quantities and keep basic records of orders and deliveries.</p></div>
+</div></section>
+<section id="forecast" style="background:#edf5ee"><div class="section-title"><h2>Demand forecast dashboard</h2><p>Example planning view. The values below are illustrative, not live market predictions.</p></div><div class="forecast-wrap">
+<div class="panel"><h3>Sample demand outlook</h3>
+<div class="forecast-row"><strong>Tomatoes</strong><div class="trend"><span style="width:82%"></span></div><span class="up">High</span></div>
+<div class="forecast-row"><strong>Onions</strong><div class="trend"><span style="width:68%"></span></div><span class="up">Medium</span></div>
+<div class="forecast-row"><strong>Spinach</strong><div class="trend"><span style="width:54%"></span></div><span class="down">Variable</span></div>
+<div class="forecast-row"><strong>Potatoes</strong><div class="trend"><span style="width:74%"></span></div><span class="up">Medium</span></div>
+<p class="small">A production version could use mandi prices, historical sales, seasonality, weather and buyer orders.</p></div>
+<div class="panel"><h3>How to use this insight</h3><ol><li>Check expected demand for your crop.</li><li>Compare it with your available harvest.</li><li>Check buyer offers and delivery costs.</li><li>Choose a sale option based on estimated net return.</li></ol><p class="small">Forecast accuracy depends on the quality and freshness of the data connected to the app.</p></div>
+</div></section>
+<section id="net-return"><div class="section-title"><h2>Net return calculator</h2><p>Enter your crop and quantity, then compare sample buyer offers.</p></div><div class="forecast-wrap">
+<div class="panel"><h3>Your produce</h3><div class="form-grid"><div><label for="crop">Crop</label><select id="crop"><option>Tomatoes</option><option>Onions</option><option>Potatoes</option><option>Spinach</option><option>Capsicum</option><option>Cauliflower</option></select></div><div><label for="qty">Quantity (kg)</label><input id="qty" type="number" min="1" value="100"></div></div><label for="location">Your location</label><input id="location" placeholder="e.g. Pune, Maharashtra"><p class="small">The calculator uses sample offers for demonstration; it does not contact real buyers.</p><button class="btn" id="calculate" type="button">Compare net returns</button><div class="result" id="result" aria-live="polite"></div></div>
+<div class="panel"><h3>Why net return matters</h3><div class="offer"><strong>Buyer A — City Mandi</strong><br>Offer price: ₹30/kg · Delivery cost: ₹5/kg<br><strong>Net: ₹25/kg</strong></div><div class="offer best"><strong>Buyer B — Local Retailer ★</strong><br>Offer price: ₹28/kg · Delivery cost: ₹1/kg<br><strong>Net: ₹27/kg</strong></div><p class="small">A lower listed price can result in higher earnings when transport costs are lower.</p></div>
+</div></section>
+<section id="how" style="background:#edf5ee"><div class="section-title"><h2>How FarmLink AI works</h2><p>A simple journey from harvest planning to selling.</p></div><div class="steps"><div class="step"><div class="num">1</div><h3>Add produce</h3><p>Enter crop, quantity and location.</p></div><div class="step"><div class="num">2</div><h3>Check demand</h3><p>Review forecast trends and market signals.</p></div><div class="step"><div class="num">3</div><h3>Compare buyers</h3><p>Check price, delivery cost and estimated net return.</p></div><div class="step"><div class="num">4</div><h3>Choose wisely</h3><p>Contact a suitable buyer and plan delivery.</p></div></div></section>
+<footer><div><strong>FarmLink AI</strong><div class="small">Helping farmers make informed selling decisions.</div></div><div class="small">Student prototype · Sample data only · Not connected to live market APIs</div></footer>
+<script>
+(function(){
+const btn=document.getElementById('calculate');
+btn.addEventListener('click',function(){
+ const raw=document.getElementById('qty').value;
+ const qty=Number(raw);
+ const crop=document.getElementById('crop').value;
+ const location=document.getElementById('location').value.trim();
+ const box=document.getElementById('result');
+ if(!Number.isFinite(qty)||qty<=0){box.classList.add('show');box.innerHTML='<strong>Please enter a quantity greater than 0 kg.</strong>';return;}
+ const offers=[{name:'City Mandi',price:30,cost:5},{name:'Local Retailer',price:28,cost:1}].map(o=>({...o,net:o.price-o.cost,total:(o.price-o.cost)*qty}));
+ offers.sort((a,b)=>b.net-a.net);
+ box.classList.add('show');
+ box.innerHTML='<strong>Comparison for '+escapeHtml(crop)+(location?' near '+escapeHtml(location):'')+'</strong><div class="offer">'+offers[0].name+': ₹'+offers[0].net.toFixed(2)+'/kg net<br>Estimated total: ₹'+offers[0].total.toLocaleString('en-IN',{maximumFractionDigits:2})+'</div><div class="offer">'+offers[1].name+': ₹'+offers[1].net.toFixed(2)+'/kg net<br>Estimated total: ₹'+offers[1].total.toLocaleString('en-IN',{maximumFractionDigits:2})+'</div><p><strong>Demo recommendation:</strong> '+offers[0].name+' gives the higher estimated net return using these sample values.</p><span class="small">Sample data only. Confirm actual buyer prices and transport charges before selling.</span>';
+});
+function escapeHtml(s){return s.replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+})();
+</script>
+</body>
+</html>
